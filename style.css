@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -24,8 +24,8 @@ nav {
 }
 
 nav .nav-left {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
 }
 
 nav .nav-left img {
@@ -34,27 +34,92 @@ nav .nav-left img {
 }
 
 nav .nav-right {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-nav .nav-right h3 {
-  padding-right: 2rem;
-  font-size: 1.5rem;
+nav .nav-right .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30%;
+  max-width: 200px;
+}
+
+nav .nav-right .location .location-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav-right .location .location-top i {
+  padding-right: .8rem;
+}
+
+nav .nav-right .location p {
+  padding-top: .5rem;
+  text-align: center;
+}
+
+nav .nav-right .contact-us {
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav-right .contact-us .contact-us-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+nav .nav-right .contact-us .contact-us-top i {
+  padding-right: .8rem;
+}
+
+nav .nav-right .contact-us h3 {
+  padding-top: .5rem;
   font-family: 'Libre Franklin', sans-serif;
 }
 
 nav .nav-right a img {
-  padding-right: 1rem;
   max-height: 40px;
 }
 
@@ -164,6 +229,7 @@ nav .nav-right a img {
 
 .grid-section {
   width: 100%;
+  overflow: hidden;
 }
 
 .grid-section .grid-container {
@@ -375,9 +441,50 @@ nav .nav-right a img {
   left: 0;
 }
 
+.background-fixed {
+  height: 60vh;
+  background-image: url("https://images.unsplash.com/photo-1471977360223-d8cc63cec57c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80");
+  background-attachment: fixed;
+  background-size: contain;
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+.background-fixed::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.705);
+  z-index: -1;
+}
+
+.background-fixed h2 {
+  color: white;
+  z-index: 4;
+  font-family: 'Cinzel', serif;
+  padding: 2rem;
+  width: 70%;
+  margin: auto;
+  font-size: 2.3rem;
+  text-align: center;
+  line-height: 1.9;
+}
+
+.background-fixed hr {
+  width: 50%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.425);
+  border: none;
+  height: 2px;
+}
+
 .footer {
-  background: -webkit-gradient(linear, left top, left bottom, from(#27519f), to(white));
-  background: linear-gradient(#27519f, white);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(39, 81, 159, 0.678)), to(white));
+  background: linear-gradient(rgba(39, 81, 159, 0.678), white);
   padding-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,7 +493,6 @@ nav .nav-right a img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow: hidden;
-  font-family: 'Oswald', sans-serif;
 }
 
 .footer .footer-left {
@@ -413,10 +519,10 @@ nav .nav-right a img {
   height: 3px;
   border: none;
   background: black;
+  margin-bottom: .4rem;
 }
 
 .footer .footer-left h3 {
-  line-height: 2.1;
   font-size: 1.7rem;
 }
 

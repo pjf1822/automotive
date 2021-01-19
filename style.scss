@@ -3,8 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap');
 
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -26,7 +25,7 @@ nav{
 
 
     .nav-left{
-        flex-basis: 50%;
+        flex-basis: 30%;
 
 
         
@@ -41,22 +40,69 @@ nav{
     }
 
     .nav-right{
-        flex-basis: 50%;
+        flex-basis: 70%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-evenly;
         align-items: center;
 
+        .location{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            max-width: 200px;
 
-        h3{
-            padding-right: 2rem;
-            font-size: 1.5rem;
-            font-family: 'Libre Franklin', sans-serif;
+            .location-top{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i{
+                    padding-right: .8rem;
+                }
+            }
+
+            p{
+                padding-top: .5rem;
+                text-align: center;
+
+            }
+
+
+
+        }
+
+
+
+        .contact-us{
+            padding-left: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+
+            .contact-us-top{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                i{
+                    padding-right: .8rem;
+                }
+
+            }
+            h3{
+                padding-top: .5rem;
+                
+                font-family: 'Libre Franklin', sans-serif;
+            }
+
+
         }
 
 
         a{
             img{
-                padding-right: 1rem;
+                // padding-right: rem;
                 max-height: 40px;
             }
         }
@@ -173,6 +219,7 @@ nav{
     width: 100%;
     // display: flex;
     // padding-top: 6rem;
+    overflow: hidden;
 
 
 
@@ -183,10 +230,43 @@ nav{
         align-items: center;
         justify-content: center;
 
+        hr{
+            width: 40%;
+            margin: auto;
+            margin-top: 1.4rem;
+            border: none;
+            background: black;
+            height: 2px;
+            padding: 0 3rem;
+        }
+
+        .hr-left{
+            width: 80%;
+            margin-right: auto;
+            margin-top: 1.4rem;
+            border: none;
+            background: black;
+            height: 2px;
+            padding: 0 3rem;
+            transform: translateX(-30%);
+        }
+
+        .hr-right{
+            width: 80%;
+            margin-right: left;
+            margin-top: 1.4rem;
+            border: none;
+            background: black;
+            height: 2px;
+            padding: 0 3rem;
+            transform: translateX(30%);
+        }
+
+
 
 
     // background-color: rgb(39, 81, 159);
-    background: linear-gradient(rgb(39, 81, 159), white);
+        background: linear-gradient(rgb(39, 81, 159), white);
 
         .grid-left{
             margin-right: auto;
@@ -196,12 +276,12 @@ nav{
             margin-left: auto;
         }
 
-        .words1{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
+        // .words1{
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     height: 100%;
+        // }
 
 
         img{
@@ -215,6 +295,7 @@ nav{
             text-align: center;
             padding: 0 3rem;
             line-height: 1.7;
+            width: 90%;
         }
     }
 }
@@ -248,6 +329,7 @@ nav{
 
 .reviews{
     height: 60vh;
+    margin-top: 7rem;
     // background: linear-gradient(rgb(187, 187, 187), white);
 
 
@@ -286,6 +368,7 @@ nav{
             align-items: center;
             transition: .4s all ease-in-out;
             background-color: rgba(39, 81, 159, 0.432);
+            
 
             &:hover{
                 scale: 1.05;
@@ -362,20 +445,74 @@ nav{
 
             
         }
-        margin-bottom: 9rem;
+        margin-bottom:11rem;
+    }
+
+
+
+    .background-fixed{
+        height: 60vh;
+        background-image: url('https://images.unsplash.com/photo-1471977360223-d8cc63cec57c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80');
+        background-attachment: fixed;
+        background-size: contain;
+        position: relative;
+        z-index: 1;
+        // background: linear-gradient(blue, yellow);
+        mix-blend-mode: overlay;
+
+ 
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.705);
+            z-index: -1;
+        }
+
+
+
+      
+            h2{
+                color: white;
+                z-index: 4;
+                font-family: 'Cinzel', serif;
+                padding: 2rem;
+                width: 70%;
+                margin: auto;
+                font-size: 2.3rem;
+                text-align: center;
+                line-height: 1.9;
+
+    
+            }
+
+            hr{
+                width: 50%;
+                margin: auto;
+                background-color: rgba(255, 255, 255, 0.425);
+                border: none;
+                height: 2px ;
+            }
+
+        
     }
 
 
 
 
+
+
 .footer{
-    background: linear-gradient(rgb(39, 81, 159), white);
+    background: linear-gradient(rgba(39, 81, 159, 0.678), white);
     padding-top: 2rem;
 
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-    font-family: 'Oswald', sans-serif;
+    // font-family: 'Abel', sans-serif;
     
     
     
@@ -386,9 +523,20 @@ nav{
         justify-content: center;
         align-items: flex-start;
         line-height: 1.7;
+
+        hr{
+            width: 20%;
+            height: 3px;
+            height: 3px;
+            border: none;
+            background: black;
+            margin-bottom: .4rem;
+        }
+
+        
         
         h3{
-            line-height: 2.1;
+            // line-height: 2.1;
             font-size: 1.7rem;
         
         }
@@ -407,7 +555,7 @@ nav{
         padding-bottom: 1rem;
 
         iframe{
-            border-radius: 5px;
+            border-radius: 9px;
             box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.473);
         }
     }
