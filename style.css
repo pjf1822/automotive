@@ -182,25 +182,46 @@ nav .nav-right a img {
   background: linear-gradient(#27519f, white);
 }
 
+.grid-section .grid-container hr {
+  width: 40%;
+  margin: auto;
+  margin-top: 1.4rem;
+  border: none;
+  background: black;
+  height: 2px;
+  padding: 0 3rem;
+}
+
+.grid-section .grid-container .hr-left {
+  width: 80%;
+  margin-right: auto;
+  margin-top: 1.4rem;
+  border: none;
+  background: black;
+  height: 2px;
+  padding: 0 3rem;
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+}
+
+.grid-section .grid-container .hr-right {
+  width: 80%;
+  margin-right: left;
+  margin-top: 1.4rem;
+  border: none;
+  background: black;
+  height: 2px;
+  padding: 0 3rem;
+  -webkit-transform: translateX(30%);
+          transform: translateX(30%);
+}
+
 .grid-section .grid-container .grid-left {
   margin-right: auto;
 }
 
 .grid-section .grid-container .grid-right {
   margin-left: auto;
-}
-
-.grid-section .grid-container .words1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
 }
 
 .grid-section .grid-container img {
@@ -215,6 +236,7 @@ nav .nav-right a img {
   text-align: center;
   padding: 0 3rem;
   line-height: 1.7;
+  width: 90%;
 }
 
 .image-transitions {
@@ -246,7 +268,8 @@ nav .nav-right a img {
 
 .reviews {
   height: 60vh;
-  margin-bottom: 9rem;
+  margin-top: 7rem;
+  margin-bottom: 11rem;
 }
 
 .reviews .reviews-title h2 {
@@ -384,6 +407,14 @@ nav .nav-right a img {
   line-height: 1.7;
 }
 
+.footer .footer-left hr {
+  width: 20%;
+  height: 3px;
+  height: 3px;
+  border: none;
+  background: black;
+}
+
 .footer .footer-left h3 {
   line-height: 2.1;
   font-size: 1.7rem;
@@ -403,7 +434,7 @@ nav .nav-right a img {
 }
 
 .footer .footer-right iframe {
-  border-radius: 5px;
+  border-radius: 9px;
   -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.473);
           box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.473);
 }
