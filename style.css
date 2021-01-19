@@ -21,6 +21,7 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 100;
+  padding: 0 3rem;
 }
 
 nav .nav-left {
@@ -30,7 +31,7 @@ nav .nav-left {
 
 nav .nav-left img {
   max-height: 110px;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 nav .nav-right {
@@ -39,49 +40,16 @@ nav .nav-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-nav .nav-right .location {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 30%;
-  max-width: 200px;
-}
-
-nav .nav-right .location .location-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-nav .nav-right .location .location-top i {
-  padding-right: .8rem;
-}
-
-nav .nav-right .location p {
-  padding-top: .5rem;
-  text-align: center;
 }
 
 nav .nav-right .contact-us {
-  padding-left: 1rem;
+  padding-right: 1.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,6 +195,130 @@ nav .nav-right a img {
   font-size: 1.4rem;
 }
 
+.specialize {
+  background-color: white;
+  height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.specialize .wordsrotate {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(39, 81, 159, 0.432);
+  border-radius: 5px;
+  height: 50px;
+  width: 180px;
+  margin-left: 1rem;
+}
+
+.specialize .wordsrotate .word1 {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation: words 15s infinite;
+          animation: words 15s infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  white-space: nowrap;
+  top: 20%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.specialize .wordsrotate .word2 {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation: words 15s infinite;
+          animation: words 15s infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  white-space: nowrap;
+  top: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.specialize .wordsrotate .word3 {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation: words 15s infinite;
+          animation: words 15s infinite;
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+  white-space: nowrap;
+  top: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.specialize .wordsrotate .word4 {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation: words 15s infinite;
+          animation: words 15s infinite;
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+  white-space: nowrap;
+  top: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.specialize .wordsrotate .word5 {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation: words 15s infinite;
+          animation: words 15s infinite;
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+  white-space: nowrap;
+  top: 20%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@-webkit-keyframes words {
+  8% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+}
+
+@keyframes words {
+  8% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+}
+
 .grid-section {
   width: 100%;
   overflow: hidden;
@@ -348,7 +440,7 @@ nav .nav-right a img {
   width: 40%;
   margin: auto;
   height: 3px;
-  background-color: rgba(39, 81, 159, 0.432);
+  background-color: black;
   border: none;
 }
 
@@ -389,7 +481,7 @@ nav .nav-right a img {
 }
 
 .reviews .cards .card:hover {
-  scale: 1.05;
+  scale: 1.03;
 }
 
 .reviews .cards .card .card-top {
@@ -441,6 +533,11 @@ nav .nav-right a img {
   left: 0;
 }
 
+.reviews .cards .card:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
 .background-fixed {
   height: 60vh;
   background-image: url("https://images.unsplash.com/photo-1471977360223-d8cc63cec57c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80");
@@ -474,6 +571,15 @@ nav .nav-right a img {
   line-height: 1.9;
 }
 
+.background-fixed p {
+  color: white;
+  width: 70%;
+  padding: 0 2rem 2rem 2rem;
+  margin: auto;
+  text-align: center;
+  line-height: 1.9;
+}
+
 .background-fixed hr {
   width: 50%;
   margin: auto;
@@ -482,66 +588,268 @@ nav .nav-right a img {
   height: 2px;
 }
 
-.footer {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(39, 81, 159, 0.678)), to(white));
-  background: linear-gradient(rgba(39, 81, 159, 0.678), white);
-  padding-top: 2rem;
+.keys-section {
+  padding: 3rem;
+}
+
+.keys-section .key-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow: hidden;
 }
 
-.footer .footer-left {
-  padding-left: 2rem;
+.keys-section .key-cards .key-card {
+  -ms-flex-preferred-size: 23%;
+      flex-basis: 23%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.459);
+          box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.459);
+  border-radius: 5px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  min-height: 240px;
+  color: white;
+}
+
+.keys-section .key-cards .key-card.key-card1 {
+  background-image: url("https://www.autokeyconnection.com/wp-content/uploads/2016/06/combo.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 3;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.keys-section .key-cards .key-card.key-card1::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.keys-section .key-cards .key-card.key-card2 {
+  background-image: url("https://www.autokeyconnection.com/wp-content/uploads/2016/06/smar.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 3;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.keys-section .key-cards .key-card.key-card2::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.keys-section .key-cards .key-card.key-card3 {
+  background-image: url("https://www.autokeyconnection.com/wp-content/uploads/2016/06/tkey.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 3;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.keys-section .key-cards .key-card.key-card3::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.keys-section .key-cards .key-card.key-card4 {
+  background-image: url("https://www.autokeyconnection.com/wp-content/uploads/2016/06/remot.png");
+  background-position: center;
+  background-size: cover;
+  z-index: 3;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.keys-section .key-cards .key-card.key-card4::after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.keys-section .key-cards .key-card h2 {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.keys-section .key-cards .key-card img {
+  max-height: 100px;
+  max-width: 100px;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.keys-section .key-cards .key-card p {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.keys-section .key-cards .key-card hr {
+  width: 50%;
+  background-color: black;
+  height: 2px;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.keys-section .key-cards .key-card:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.meeting-your-needs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6rem 3rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  line-height: 1.7;
 }
 
-.footer .footer-left hr {
-  width: 20%;
-  height: 3px;
-  height: 3px;
-  border: none;
+.meeting-your-needs .meeting-left {
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
+}
+
+.meeting-your-needs .meeting-left h2 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.meeting-your-needs .meeting-left h2 span {
+  color: rgba(39, 81, 159, 0.432);
+}
+
+.meeting-your-needs .meeting-left .meeting-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.meeting-your-needs .meeting-left .meeting-grid .meeting-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: .7rem;
+}
+
+.meeting-your-needs .meeting-left .meeting-grid .meeting-card i {
+  margin-right: .7rem;
+  padding: .6rem;
+  color: white;
   background: black;
-  margin-bottom: .4rem;
+  border-radius: 50%;
 }
 
-.footer .footer-left h3 {
-  font-size: 1.7rem;
+.meeting-your-needs .meeting-left .meeting-grid .meeting-card .fa-dollar-sign {
+  padding: .6rem .8rem;
 }
 
-.footer .footer-left h4 {
-  font-size: 1.3rem;
+.meeting-your-needs .meeting-right {
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+  position: relative;
 }
 
-.footer .footer-left .another-one {
-  padding-top: 2rem;
+.meeting-your-needs .meeting-right svg {
+  fill: rgba(39, 81, 159, 0.288);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
 }
 
-.footer .footer-right {
-  padding-right: 3rem;
+.meeting-your-needs .meeting-right h3 {
   padding-bottom: 1rem;
+  font-size: 2rem;
+  color: rgba(39, 81, 159, 0.432);
 }
 
-.footer .footer-right iframe {
-  border-radius: 9px;
-  -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.473);
-          box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.473);
+.meeting-your-needs .meeting-right .meeting-right-card h4 {
+  font-size: 1.4rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.meeting-your-needs .meeting-right .meeting-right-card p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.after-meeting hr {
+  width: 50%;
+  height: 2px;
+  background-color: black;
+  border: none;
+  margin: 0rem auto 6rem auto;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer-logo img {
+  max-height: 160px;
 }
 /*# sourceMappingURL=style.css.map */
