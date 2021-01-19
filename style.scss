@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -239,3 +242,176 @@ nav{
 
     }
 }
+
+
+
+
+.reviews{
+    height: 60vh;
+    // background: linear-gradient(rgb(187, 187, 187), white);
+
+
+    .reviews-title{
+        h2{
+            font-size: 3rem;
+            text-align: center;
+            font-family: 'Cinzel', serif;
+
+        }
+
+        hr{
+            width: 40%;
+            margin: auto;
+            height: 3px;
+            background-color: rgba(39, 81, 159, 0.432);
+            border: none;
+        }
+    }
+
+    .cards{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 6rem;
+    
+        
+        .card{
+            flex-basis: 31%;
+            box-shadow: 1px 2px 3px black;
+            padding: .7rem;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            transition: .4s all ease-in-out;
+            background-color: rgba(39, 81, 159, 0.432);
+
+            &:hover{
+                scale: 1.05;
+            }
+
+            .card-top{
+                transform: translateY(-50px);
+                
+
+                img{
+                    height: 100px;
+                    border: 4px solid white;
+                    border-radius: 50%;
+                }
+                
+            }
+
+            .card-title{
+                padding-bottom: 1rem;
+                font-size: 1.2rem;
+                transform: translateY(-20px);
+
+            }
+
+            .stars{
+                transform: translateY(-20px);
+
+            }
+
+
+            .descript{
+                position: relative;
+                .fa-quote-right{
+                    position: absolute;
+                    bottom: 5px;
+                    right: 3px;
+                }
+
+                p{
+                    line-height: 1.6;
+                    text-align: center;
+                    font-size: 1rem;
+                    padding-bottom: 2rem;
+                    position: relative;
+                    width: 90%;
+                    margin: 0 auto;
+    
+                    // &:after{
+                    //     position: absolute;
+                    //     content: "\f10d";
+                    //     height: 30px;
+                    //     width: 30px;
+                    //     top: 0;
+                    //     left: 0;
+                    //     z-index: 3;
+                    //     font-weight: 400;
+                    //     font-family: "Font Awesome 5 Free";
+    
+                    // }
+                }
+
+                .fa-quote-left{
+                    position: absolute;
+                    top: -5px;
+                    left: 0;
+                }
+
+            }
+            }
+
+
+
+
+
+            
+        }
+        margin-bottom: 9rem;
+    }
+
+
+
+
+.footer{
+    background: linear-gradient(rgb(39, 81, 159), white);
+    padding-top: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    
+    
+    
+    .footer-left{
+        padding-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        line-height: 1.7;
+        
+        h3{
+            line-height: 2.1;
+            font-size: 1.7rem;
+        
+        }
+
+        h4{
+            font-size: 1.3rem;
+        }
+
+        .another-one{
+            padding-top: 2rem;
+        }
+    }
+
+    .footer-right{
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+
+        iframe{
+            border-radius: 5px;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.473);
+        }
+    }
+}
+
+
+
